@@ -37,7 +37,12 @@ def add_task(tasks):
     created_at = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     # 新しいタスクを作成
-    new_task = {"id": new_id, "title": title.strip(), "completed": False, "created_at": created_at}
+    new_task = {
+        "id": new_id,
+        "title": title.strip(),
+        "completed": False,
+        "created_at": created_at,
+    }
 
     tasks.append(new_task)
     print(f"タスク「{title.strip()}」を追加しました。")
@@ -46,8 +51,18 @@ def add_task(tasks):
 def main():
     # 初期データ（動作確認用）
     tasks = [
-        {"id": 1, "title": "牛乳を買う", "completed": False, "created_at": "2024-01-15 10:30"},
-        {"id": 2, "title": "メールを返信する", "completed": True, "created_at": "2024-01-14 09:00"},
+        {
+            "id": 1,
+            "title": "牛乳を買う",
+            "completed": False,
+            "created_at": "2026-01-15 10:30",
+        },
+        {
+            "id": 2,
+            "title": "メールを返信する",
+            "completed": True,
+            "created_at": "2026-01-14 09:00",
+        },
     ]
 
     while True:
